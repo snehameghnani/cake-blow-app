@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const candleCountDisplay = document.getElementById("candleCount");
   const message = document.getElementById("message");
   let candles = [];
+  let hasAddedCandles = false;
   let audioContext;
   let analyser;
   let microphone;
@@ -15,6 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function addCandle(left, top) {
+    hasAddedCandles = true;
+    finalMessage.style.display = "none";
+    
     const candle = document.createElement("div");
     candle.className = "candle";
     candle.style.left = left + "px";
@@ -70,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
     (candle) => !candle.classList.contains("out")
   ).length;
 
-  if (activeCandles === 0 && candles.length > 0) {
+  if (hasAddedCandles && activeCandles === 0) {
     message.style.display = "block";
   }
 }
@@ -95,5 +99,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 });
+
 
 
