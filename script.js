@@ -12,9 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
       (candle) => !candle.classList.contains("out")
     ).length;
     candleCountDisplay.textContent = activeCandles;
-    if (activeCandles === 0 && candles.length > 0) {
-    message.style.display = "block";
-    }
   }
 
   function addCandle(left, top) {
@@ -68,7 +65,16 @@ document.addEventListener("DOMContentLoaded", function () {
     if (blownOut > 0) {
       updateCandleCount();
     }
+    
+    const activeCandles = candles.filter(
+    (candle) => !candle.classList.contains("out")
+  ).length;
+
+  if (activeCandles === 0 && candles.length > 0) {
+    finalMessage.style.display = "block";
   }
+}
+
 
   if (navigator.mediaDevices.getUserMedia) {
     navigator.mediaDevices
@@ -89,3 +95,4 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 });
+
