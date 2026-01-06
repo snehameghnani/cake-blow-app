@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
   ).length;
 
   if (activeCandles === 0 && candles.length > 0) {
-    finalMessage.style.display = "block";
+    message.style.display = "block";
   }
 }
 
@@ -95,4 +95,5 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 });
+
 
