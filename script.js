@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function addCandle(left, top) {
     hasAddedCandles = true;
-    finalMessage.style.display = "none";
+    message.style.display = "none";
     
     const candle = document.createElement("div");
     candle.className = "candle";
@@ -99,6 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 });
+
 
 
 
