@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const cake = document.querySelector(".cake");
   const candleCountDisplay = document.getElementById("candleCount");
+  const message = document.getElementById("message");
   let candles = [];
   let audioContext;
   let analyser;
@@ -11,6 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
       (candle) => !candle.classList.contains("out")
     ).length;
     candleCountDisplay.textContent = activeCandles;
+    if (activeCandles === 0 && candles.length > 0) {
+    message.style.display = "block";
+    }
   }
 
   function addCandle(left, top) {
@@ -83,4 +87,5 @@ document.addEventListener("DOMContentLoaded", function () {
   } else {
     console.log("getUserMedia not supported on your browser!");
   }
+
 });
