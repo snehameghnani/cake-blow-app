@@ -13,6 +13,9 @@ document.addEventListener("DOMContentLoaded", function () {
       (candle) => !candle.classList.contains("out")
     ).length;
     candleCountDisplay.textContent = activeCandles;
+    if (hasAddedCandles && activeCandles === 0) {
+      message.style.display = "block";
+    }
   }
 
   function addCandle(left, top) {
@@ -30,6 +33,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     cake.appendChild(candle);
     candles.push(candle);
+
+    hasAddedCandles = true;
+    message.style.display = "none";
+
     updateCandleCount();
   }
 
@@ -99,7 +106,5 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 });
-
-
 
 
