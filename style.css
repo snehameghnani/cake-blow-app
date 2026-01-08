@@ -27,7 +27,6 @@ body {
   color: #AD030F;
 }
 
-/* Cake stays absolute and centered */
 .cake {
   position: absolute;
   width: 250px;
@@ -57,9 +56,25 @@ body {
   width: 250px;
   height: 100px;
   border-radius: 50%;
-  background-color: #553c13;
-  box-shadow: 0 2px 0px #6a4b18, 0 4px 0px #33240b, 0 6px 0px #32230b, 0 8px 0px #31230b, 0 10px 0px #30220b, 0 12px 0px #2f220b, 0 14px 0px #2f210a, 0 16px 0px #2e200a, 0 18px 0px #2d200a, 0 20px 0px #2c1f0a, 0 22px 0px #2b1f0a, 0 24px 0px #2a1e09, 0 26px 0px #2a1d09, 0 28px 0px #291d09, 0 30px 0px #281c09;
+  background-color: #f4a3c4;
+  box-shadow: 
+    0 2px 0px #f6b1ce,
+    0 4px 0px #e28bb3,
+    0 6px 0px #df88af,
+    0 8px 0px #dc85ab,
+    0 10px 0px #d982a7,
+    0 12px 0px #d67fa3,
+    0 14px 0px #d37c9f,
+    0 16px 0px #d0799b,
+    0 18px 0px #cd7697,
+    0 20px 0px #ca7393,
+    0 22px 0px #c7708f,
+    0 24px 0px #c46d8b,
+    0 26px 0px #c16a87,
+    0 28px 0px #be6783,
+    0 30px 0px #bb647f;
 }
+
 
 .layer-top { top: 0; }
 .layer-middle { top: 33px; }
@@ -100,7 +115,7 @@ body {
 .drip2 { top: 69px; left: 181px; transform: skewY(-15deg); }
 .drip3 { top: 54px; left: 90px; width: 80px; border-bottom-left-radius: 40px; border-bottom-right-radius: 40px; }
 
-/* Candles */
+
 .candle {
   background-color: #7B020B;
   width: 12px;
@@ -123,7 +138,7 @@ body {
 }
 .candle.out .flame { display: none; }
 
-/* Flame animation */
+
 .flame {
   position: absolute;
   background-color: orange;
@@ -147,11 +162,10 @@ body {
   100% { transform: skewX(5deg); box-shadow:0 0 10px rgba(255,165,0,0.5),0 0 20px rgba(255,165,0,0.5),0 0 60px rgba(255,165,0,0.5),0 0 80px rgba(255,165,0,0.5);}
 }
 
-/* Message box stays absolute to the right of cake */
 .message-box {
   position: absolute;
   top: 50%;
-  left: calc(50% + 150px); /* 250px cake width / 2 + 30px gap */
+  left: calc(50% + 150px); 
   transform: translateY(-50%);
   width: 220px;
   padding: 15px;
